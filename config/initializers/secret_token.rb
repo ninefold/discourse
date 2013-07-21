@@ -7,12 +7,4 @@
 # Generate a new secret with "rake secret".  Copy the output of that command and paste it
 # in your secret_token.rb as the value of Discourse::Application.config.secret_token:
 #
-# Discourse::Application.config.secret_token = "SET_SECRET_HERE"
-
-if Rails.env.test? || Rails.env.development? || Rails.env == "profile"
-  Discourse::Application.config.secret_token = "47f5390004bf6d25bb97083fb98e7cc133ab450ba814dd19638a78282b4ca291"
-else
-  raise "You must set a secret token in ENV['SECRET_TOKEN'] or in config/initializers/secret_token.rb" if ENV['SECRET_TOKEN'].blank?
-  Discourse::Application.config.secret_token = ENV['SECRET_TOKEN']
-end
-
+Discourse::Application.config.secret_token = "028671cdf37450e8519bb974404904c3468f44c622bc8f6fd66f08f00afb5548d470a1338b46c21622396df156a8236a7f9b63adba2c58520643291cbcd9a475"
